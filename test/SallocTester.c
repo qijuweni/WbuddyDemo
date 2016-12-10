@@ -131,10 +131,33 @@ TEST(Salloc, SetChunkAllocted)
     SetChunkAllocted(pSalloc, 0, 0, NULL);
 
     char value = 1;
+    int num = pSalloc->orderNums_;
     for(int i = 0; i < 8; i++)
     {
+        if( i >= num )
+            break;
+
         EXPECT_EQ(pSalloc->pSallocArray_[i][0], (char)value);
         value *= 2;
     }
+
+    value = 1;
+    for(int i = 8; i < 16; i++)
+    {
+        if( i >= num )
+            break;
+
+        EXPECT_EQ(pSalloc->pSallocArray_[i][1], (char)value);
+        EXPECT_EQ(pSalloc->pSallocArray_[i][0], (char)0);
+        value *= 2;
+    }
+
+    SetChunkAllocted(pManager, 2, 1, NULL);
+    EXPECT_EQ(pSalloc->pSallocArray_[3][0], (char)12);
+    EXPECT_EQ(pSalloc->pSallocArray_[4][0], (char)16);
+
+    SetChunkAllocted(pManager, 3, 1, NULL);
+    EXPECT_EQ(pSalloc->pSallocArray_[4][0], (char)28);
+    EXPECT_EQ(pSalloc->pSallocArray_[5][0], (char)32);
 }
 
