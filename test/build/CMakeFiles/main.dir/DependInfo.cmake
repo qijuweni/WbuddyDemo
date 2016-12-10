@@ -5,12 +5,12 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
-  "/home/qjw/WBuddy/WBuddyModel/test/SallocTester.c" "/home/qjw/WBuddy/WBuddyModel/test/build/CMakeFiles/main.dir/SallocTester.c.o"
-  "/home/qjw/WBuddy/WBuddyModel/src/Salloc.c" "/home/qjw/WBuddy/WBuddyModel/test/build/CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o"
+  "/home/qijunwei/WbuddyDemo/test/SallocTester.c" "/home/qijunwei/WbuddyDemo/test/build/CMakeFiles/main.dir/SallocTester.c.o"
+  "/home/qijunwei/WbuddyDemo/src/Salloc.c" "/home/qijunwei/WbuddyDemo/test/build/CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp" "/home/qjw/WBuddy/WBuddyModel/test/build/CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o"
+  "/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp" "/home/qijunwei/WbuddyDemo/test/build/CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -21,6 +21,7 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
   "../../include"
+  "/home/qijunwei/googletest/googletest/include"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

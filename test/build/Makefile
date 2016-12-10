@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/qjw/WBuddy/WBuddyModel/test
+CMAKE_SOURCE_DIR = /home/qijunwei/WbuddyDemo/test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/qjw/WBuddy/WBuddyModel/test/build
+CMAKE_BINARY_DIR = /home/qijunwei/WbuddyDemo/test/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/qjw/WBuddy/WBuddyModel/test/build/CMakeFiles /home/qjw/WBuddy/WBuddyModel/test/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/qijunwei/WbuddyDemo/test/build/CMakeFiles /home/qijunwei/WbuddyDemo/test/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/qjw/WBuddy/WBuddyModel/test/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/qijunwei/WbuddyDemo/test/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -135,53 +135,53 @@ SallocTester.c.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/SallocTester.c.s
 .PHONY : SallocTester.c.s
 
-home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.o: home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o
-.PHONY : home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.o
+home/qijunwei/WbuddyDemo/src/ChunkGroup.o: home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o
+.PHONY : home/qijunwei/WbuddyDemo/src/ChunkGroup.o
 
 # target to build an object file
-home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o
-.PHONY : home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o
+home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o
+.PHONY : home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o
 
-home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.i: home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.i
-.PHONY : home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.i
+home/qijunwei/WbuddyDemo/src/ChunkGroup.i: home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.i
+.PHONY : home/qijunwei/WbuddyDemo/src/ChunkGroup.i
 
 # target to preprocess a source file
-home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.i
-.PHONY : home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.i
+home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.i
+.PHONY : home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.i
 
-home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.s: home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.s
-.PHONY : home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.s
+home/qijunwei/WbuddyDemo/src/ChunkGroup.s: home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.s
+.PHONY : home/qijunwei/WbuddyDemo/src/ChunkGroup.s
 
 # target to generate assembly for a file
-home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.s
-.PHONY : home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.s
+home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.s
+.PHONY : home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.s
 
-home/qjw/WBuddy/WBuddyModel/src/Salloc.o: home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o
-.PHONY : home/qjw/WBuddy/WBuddyModel/src/Salloc.o
+home/qijunwei/WbuddyDemo/src/Salloc.o: home/qijunwei/WbuddyDemo/src/Salloc.c.o
+.PHONY : home/qijunwei/WbuddyDemo/src/Salloc.o
 
 # target to build an object file
-home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o
-.PHONY : home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o
+home/qijunwei/WbuddyDemo/src/Salloc.c.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.o
+.PHONY : home/qijunwei/WbuddyDemo/src/Salloc.c.o
 
-home/qjw/WBuddy/WBuddyModel/src/Salloc.i: home/qjw/WBuddy/WBuddyModel/src/Salloc.c.i
-.PHONY : home/qjw/WBuddy/WBuddyModel/src/Salloc.i
+home/qijunwei/WbuddyDemo/src/Salloc.i: home/qijunwei/WbuddyDemo/src/Salloc.c.i
+.PHONY : home/qijunwei/WbuddyDemo/src/Salloc.i
 
 # target to preprocess a source file
-home/qjw/WBuddy/WBuddyModel/src/Salloc.c.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.i
-.PHONY : home/qjw/WBuddy/WBuddyModel/src/Salloc.c.i
+home/qijunwei/WbuddyDemo/src/Salloc.c.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.i
+.PHONY : home/qijunwei/WbuddyDemo/src/Salloc.c.i
 
-home/qjw/WBuddy/WBuddyModel/src/Salloc.s: home/qjw/WBuddy/WBuddyModel/src/Salloc.c.s
-.PHONY : home/qjw/WBuddy/WBuddyModel/src/Salloc.s
+home/qijunwei/WbuddyDemo/src/Salloc.s: home/qijunwei/WbuddyDemo/src/Salloc.c.s
+.PHONY : home/qijunwei/WbuddyDemo/src/Salloc.s
 
 # target to generate assembly for a file
-home/qjw/WBuddy/WBuddyModel/src/Salloc.c.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.s
-.PHONY : home/qjw/WBuddy/WBuddyModel/src/Salloc.c.s
+home/qijunwei/WbuddyDemo/src/Salloc.c.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.s
+.PHONY : home/qijunwei/WbuddyDemo/src/Salloc.c.s
 
 # Help Target
 help:
@@ -195,12 +195,12 @@ help:
 	@echo "... SallocTester.o"
 	@echo "... SallocTester.i"
 	@echo "... SallocTester.s"
-	@echo "... home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.o"
-	@echo "... home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.i"
-	@echo "... home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.s"
-	@echo "... home/qjw/WBuddy/WBuddyModel/src/Salloc.o"
-	@echo "... home/qjw/WBuddy/WBuddyModel/src/Salloc.i"
-	@echo "... home/qjw/WBuddy/WBuddyModel/src/Salloc.s"
+	@echo "... home/qijunwei/WbuddyDemo/src/ChunkGroup.o"
+	@echo "... home/qijunwei/WbuddyDemo/src/ChunkGroup.i"
+	@echo "... home/qijunwei/WbuddyDemo/src/ChunkGroup.s"
+	@echo "... home/qijunwei/WbuddyDemo/src/Salloc.o"
+	@echo "... home/qijunwei/WbuddyDemo/src/Salloc.i"
+	@echo "... home/qijunwei/WbuddyDemo/src/Salloc.s"
 .PHONY : help
 
 

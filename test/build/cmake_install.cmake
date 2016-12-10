@@ -1,4 +1,4 @@
-# Install script for directory: /home/qjw/WBuddy/WBuddyModel/test
+# Install script for directory: /home/qijunwei/WbuddyDemo/test
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/qjw/WBuddy/WBuddyModel/test/build/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/qijunwei/WbuddyDemo/test/build/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/qjw/WBuddy/WBuddyModel/test/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/qijunwei/WbuddyDemo/test/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

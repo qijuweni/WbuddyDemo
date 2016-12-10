@@ -93,7 +93,7 @@ void SetChunkAllocted(SallocManager *pSallocManager, int order, unsigned int chu
 
         for(int i = pSetSallocLength - 1; i >= 0; i--)
         {
-            pChunkSalloc[i] = pSetSalloc[i];
+            pChunkSalloc[i] =  (pChunkSalloc[i] | pSetSalloc[i]);//=的话会有bug
             if(pSetSalloc[i] == 0)
             {
                 break;

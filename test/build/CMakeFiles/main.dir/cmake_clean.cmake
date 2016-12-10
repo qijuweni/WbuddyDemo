@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/main.dir/SallocTester.c.o"
-  "CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o"
-  "CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o"
+  "CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o"
+  "CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.o"
   "main.pdb"
   "main"
 )

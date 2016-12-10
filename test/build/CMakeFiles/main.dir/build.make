@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/qjw/WBuddy/WBuddyModel/test
+CMAKE_SOURCE_DIR = /home/qijunwei/WbuddyDemo/test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/qjw/WBuddy/WBuddyModel/test/build
+CMAKE_BINARY_DIR = /home/qijunwei/WbuddyDemo/test/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/main.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/main.dir/flags.make
 
 CMakeFiles/main.dir/SallocTester.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/SallocTester.c.o: ../SallocTester.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/qjw/WBuddy/WBuddyModel/test/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/qijunwei/WbuddyDemo/test/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/main.dir/SallocTester.c.o"
-	g++  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/main.dir/SallocTester.c.o   -c /home/qjw/WBuddy/WBuddyModel/test/SallocTester.c
+	g++  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/main.dir/SallocTester.c.o   -c /home/qijunwei/WbuddyDemo/test/SallocTester.c
 
 CMakeFiles/main.dir/SallocTester.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/SallocTester.c.i"
-	g++  $(C_DEFINES) $(C_FLAGS) -E /home/qjw/WBuddy/WBuddyModel/test/SallocTester.c > CMakeFiles/main.dir/SallocTester.c.i
+	g++  $(C_DEFINES) $(C_FLAGS) -E /home/qijunwei/WbuddyDemo/test/SallocTester.c > CMakeFiles/main.dir/SallocTester.c.i
 
 CMakeFiles/main.dir/SallocTester.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/SallocTester.c.s"
-	g++  $(C_DEFINES) $(C_FLAGS) -S /home/qjw/WBuddy/WBuddyModel/test/SallocTester.c -o CMakeFiles/main.dir/SallocTester.c.s
+	g++  $(C_DEFINES) $(C_FLAGS) -S /home/qijunwei/WbuddyDemo/test/SallocTester.c -o CMakeFiles/main.dir/SallocTester.c.s
 
 CMakeFiles/main.dir/SallocTester.c.o.requires:
 .PHONY : CMakeFiles/main.dir/SallocTester.c.o.requires
@@ -72,64 +72,64 @@ CMakeFiles/main.dir/SallocTester.c.o.provides: CMakeFiles/main.dir/SallocTester.
 
 CMakeFiles/main.dir/SallocTester.c.o.provides.build: CMakeFiles/main.dir/SallocTester.c.o
 
-CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o: /home/qjw/WBuddy/WBuddyModel/src/Salloc.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/qjw/WBuddy/WBuddyModel/test/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o"
-	g++  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o   -c /home/qjw/WBuddy/WBuddyModel/src/Salloc.c
+CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o: /home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/qijunwei/WbuddyDemo/test/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o -c /home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp
 
-CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.i"
-	g++  $(C_DEFINES) $(C_FLAGS) -E /home/qjw/WBuddy/WBuddyModel/src/Salloc.c > CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.i
+CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp > CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.i
 
-CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.s"
-	g++  $(C_DEFINES) $(C_FLAGS) -S /home/qjw/WBuddy/WBuddyModel/src/Salloc.c -o CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.s
+CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp -o CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.s
 
-CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o.requires:
-.PHONY : CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o.requires
+CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o.requires
 
-CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o.provides: CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o.provides.build
-.PHONY : CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o.provides
+CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o.provides: CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o.provides
 
-CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o.provides.build: CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o
+CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o.provides.build: CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o
 
-CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o: /home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/qjw/WBuddy/WBuddyModel/test/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o -c /home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp
+CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.o: /home/qijunwei/WbuddyDemo/src/Salloc.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/qijunwei/WbuddyDemo/test/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.o"
+	g++  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.o   -c /home/qijunwei/WbuddyDemo/src/Salloc.c
 
-CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp > CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.i
+CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.i"
+	g++  $(C_DEFINES) $(C_FLAGS) -E /home/qijunwei/WbuddyDemo/src/Salloc.c > CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.i
 
-CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp -o CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.s
+CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.s"
+	g++  $(C_DEFINES) $(C_FLAGS) -S /home/qijunwei/WbuddyDemo/src/Salloc.c -o CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.s
 
-CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o.requires
+CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.o.requires:
+.PHONY : CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.o.requires
 
-CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o.provides: CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o.provides
+CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.o.provides: CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.o.provides.build
+.PHONY : CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.o.provides
 
-CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o.provides.build: CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o
+CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.o.provides.build: CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.o
 
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/SallocTester.c.o" \
-"CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o" \
-"CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o"
+"CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o" \
+"CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
 main: CMakeFiles/main.dir/SallocTester.c.o
-main: CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o
-main: CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o
+main: CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o
+main: CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable main"
@@ -140,8 +140,8 @@ CMakeFiles/main.dir/build: main
 .PHONY : CMakeFiles/main.dir/build
 
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/SallocTester.c.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.o.requires
 .PHONY : CMakeFiles/main.dir/requires
 
 CMakeFiles/main.dir/clean:
@@ -149,6 +149,6 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 CMakeFiles/main.dir/depend:
-	cd /home/qjw/WBuddy/WBuddyModel/test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/qjw/WBuddy/WBuddyModel/test /home/qjw/WBuddy/WBuddyModel/test /home/qjw/WBuddy/WBuddyModel/test/build /home/qjw/WBuddy/WBuddyModel/test/build /home/qjw/WBuddy/WBuddyModel/test/build/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/qijunwei/WbuddyDemo/test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/qijunwei/WbuddyDemo/test /home/qijunwei/WbuddyDemo/test /home/qijunwei/WbuddyDemo/test/build /home/qijunwei/WbuddyDemo/test/build /home/qijunwei/WbuddyDemo/test/build/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/main.dir/depend
 

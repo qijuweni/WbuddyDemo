@@ -3,10 +3,32 @@
 
 CMakeFiles/main.dir/SallocTester.c.o
  ../../include/Salloc.h
- /home/qjw/WBuddy/WBuddyModel/test/SallocTester.c
-CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o
+ /home/qijunwei/WbuddyDemo/test/SallocTester.c
+ /home/qijunwei/googletest/googletest/include/gtest/gtest-death-test.h
+ /home/qijunwei/googletest/googletest/include/gtest/gtest-message.h
+ /home/qijunwei/googletest/googletest/include/gtest/gtest-param-test.h
+ /home/qijunwei/googletest/googletest/include/gtest/gtest-printers.h
+ /home/qijunwei/googletest/googletest/include/gtest/gtest-test-part.h
+ /home/qijunwei/googletest/googletest/include/gtest/gtest-typed-test.h
+ /home/qijunwei/googletest/googletest/include/gtest/gtest.h
+ /home/qijunwei/googletest/googletest/include/gtest/gtest_pred_impl.h
+ /home/qijunwei/googletest/googletest/include/gtest/gtest_prod.h
+ /home/qijunwei/googletest/googletest/include/gtest/internal/custom/gtest-port.h
+ /home/qijunwei/googletest/googletest/include/gtest/internal/custom/gtest-printers.h
+ /home/qijunwei/googletest/googletest/include/gtest/internal/gtest-death-test-internal.h
+ /home/qijunwei/googletest/googletest/include/gtest/internal/gtest-filepath.h
+ /home/qijunwei/googletest/googletest/include/gtest/internal/gtest-internal.h
+ /home/qijunwei/googletest/googletest/include/gtest/internal/gtest-linked_ptr.h
+ /home/qijunwei/googletest/googletest/include/gtest/internal/gtest-param-util-generated.h
+ /home/qijunwei/googletest/googletest/include/gtest/internal/gtest-param-util.h
+ /home/qijunwei/googletest/googletest/include/gtest/internal/gtest-port-arch.h
+ /home/qijunwei/googletest/googletest/include/gtest/internal/gtest-port.h
+ /home/qijunwei/googletest/googletest/include/gtest/internal/gtest-string.h
+ /home/qijunwei/googletest/googletest/include/gtest/internal/gtest-tuple.h
+ /home/qijunwei/googletest/googletest/include/gtest/internal/gtest-type-util.h
+CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.o
  ../../include/Salloc.h
- /home/qjw/WBuddy/WBuddyModel/src/Salloc.c
-CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o
+ /home/qijunwei/WbuddyDemo/src/Salloc.c
+CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o
  ../../include/ChunkGroup.h
- /home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp
+ /home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp

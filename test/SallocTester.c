@@ -92,7 +92,7 @@ TEST(Salloc, IsFirstParaMax)
 TEST(Salloc, SetChunkAllocted)
 {
 //这个test是在 SetChunkAllocted 没有加上递归修改功能的测试代码
-    SetChunkAllocted(pManager, 2, 3, NULL);
+ /*   SetChunkAllocted(pManager, 2, 3, NULL);
     EXPECT_EQ(pManager->pSallocArray_[2][3], 7);
 
     SetChunkAllocted(pManager, 0, 14, NULL);
@@ -124,7 +124,7 @@ TEST(Salloc, SetChunkAllocted)
     SetChunkAllocted(pManager, 8, 1, &pManager->pSallocArray_[7][3]);//为了走到if(pSetSallocLength == perChunkSallocSpaceBytes - 1)
     EXPECT_EQ(pManager->pSallocArray_[8][3], (char)1);
     EXPECT_EQ(pManager->pSallocArray_[8][2], (char)0);
-
+*/
 
     SallocManager *pSalloc = SallocManagerForTest();
 
@@ -152,11 +152,11 @@ TEST(Salloc, SetChunkAllocted)
         value *= 2;
     }
 
-    SetChunkAllocted(pManager, 2, 1, NULL);
+    SetChunkAllocted(pSalloc, 2, 1, NULL);
     EXPECT_EQ(pSalloc->pSallocArray_[3][0], (char)12);
     EXPECT_EQ(pSalloc->pSallocArray_[4][0], (char)16);
 
-    SetChunkAllocted(pManager, 3, 1, NULL);
+    SetChunkAllocted(pSalloc, 3, 1, NULL);
     EXPECT_EQ(pSalloc->pSallocArray_[4][0], (char)28);
     EXPECT_EQ(pSalloc->pSallocArray_[5][0], (char)32);
 }

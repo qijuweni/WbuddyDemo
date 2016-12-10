@@ -1,1 +1,1 @@
-/home/qjw/WBuddy/WBuddyModel/test/build/CMakeFiles/main.dir
+/home/qijunwei/WbuddyDemo/test/build/CMakeFiles/main.dir

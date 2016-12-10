@@ -3,10 +3,32 @@
 
 CMakeFiles/main.dir/SallocTester.c.o: ../../include/Salloc.h
 CMakeFiles/main.dir/SallocTester.c.o: ../SallocTester.c
+CMakeFiles/main.dir/SallocTester.c.o: /home/qijunwei/googletest/googletest/include/gtest/gtest-death-test.h
+CMakeFiles/main.dir/SallocTester.c.o: /home/qijunwei/googletest/googletest/include/gtest/gtest-message.h
+CMakeFiles/main.dir/SallocTester.c.o: /home/qijunwei/googletest/googletest/include/gtest/gtest-param-test.h
+CMakeFiles/main.dir/SallocTester.c.o: /home/qijunwei/googletest/googletest/include/gtest/gtest-printers.h
+CMakeFiles/main.dir/SallocTester.c.o: /home/qijunwei/googletest/googletest/include/gtest/gtest-test-part.h
+CMakeFiles/main.dir/SallocTester.c.o: /home/qijunwei/googletest/googletest/include/gtest/gtest-typed-test.h
+CMakeFiles/main.dir/SallocTester.c.o: /home/qijunwei/googletest/googletest/include/gtest/gtest.h
+CMakeFiles/main.dir/SallocTester.c.o: /home/qijunwei/googletest/googletest/include/gtest/gtest_pred_impl.h
+CMakeFiles/main.dir/SallocTester.c.o: /home/qijunwei/googletest/googletest/include/gtest/gtest_prod.h
+CMakeFiles/main.dir/SallocTester.c.o: /home/qijunwei/googletest/googletest/include/gtest/internal/custom/gtest-port.h
+CMakeFiles/main.dir/SallocTester.c.o: /home/qijunwei/googletest/googletest/include/gtest/internal/custom/gtest-printers.h
+CMakeFiles/main.dir/SallocTester.c.o: /home/qijunwei/googletest/googletest/include/gtest/internal/gtest-death-test-internal.h
+CMakeFiles/main.dir/SallocTester.c.o: /home/qijunwei/googletest/googletest/include/gtest/internal/gtest-filepath.h
+CMakeFiles/main.dir/SallocTester.c.o: /home/qijunwei/googletest/googletest/include/gtest/internal/gtest-internal.h
+CMakeFiles/main.dir/SallocTester.c.o: /home/qijunwei/googletest/googletest/include/gtest/internal/gtest-linked_ptr.h
+CMakeFiles/main.dir/SallocTester.c.o: /home/qijunwei/googletest/googletest/include/gtest/internal/gtest-param-util-generated.h
+CMakeFiles/main.dir/SallocTester.c.o: /home/qijunwei/googletest/googletest/include/gtest/internal/gtest-param-util.h
+CMakeFiles/main.dir/SallocTester.c.o: /home/qijunwei/googletest/googletest/include/gtest/internal/gtest-port-arch.h
+CMakeFiles/main.dir/SallocTester.c.o: /home/qijunwei/googletest/googletest/include/gtest/internal/gtest-port.h
+CMakeFiles/main.dir/SallocTester.c.o: /home/qijunwei/googletest/googletest/include/gtest/internal/gtest-string.h
+CMakeFiles/main.dir/SallocTester.c.o: /home/qijunwei/googletest/googletest/include/gtest/internal/gtest-tuple.h
+CMakeFiles/main.dir/SallocTester.c.o: /home/qijunwei/googletest/googletest/include/gtest/internal/gtest-type-util.h
 
-CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o: ../../include/Salloc.h
-CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o: /home/qjw/WBuddy/WBuddyModel/src/Salloc.c
+CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.o: ../../include/Salloc.h
+CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/Salloc.c.o: /home/qijunwei/WbuddyDemo/src/Salloc.c
 
-CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o: ../../include/ChunkGroup.h
-CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o: /home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp
+CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o: ../../include/ChunkGroup.h
+CMakeFiles/main.dir/home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp.o: /home/qijunwei/WbuddyDemo/src/ChunkGroup.cpp
 
