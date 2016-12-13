@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../include/Salloc.h
+stdio.h
+../../include/stdio.h
+
+/home/qjw/WBuddy/WBuddyModel/test/SallocTester.c
+stdio.h
+/home/qjw/WBuddy/WBuddyModel/test/stdio.h
+gtest/gtest.h
+-
+Salloc.h
+/home/qjw/WBuddy/WBuddyModel/test/Salloc.h
+

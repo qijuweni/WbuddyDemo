@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/main.dir/SallocTester.c.o CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/Salloc.c.o CMakeFiles/main.dir/home/qjw/WBuddy/WBuddyModel/src/ChunkGroup.cpp.o  -o main -rdynamic -Wl,-Bstatic -lgtest -lgtest_main -Wl,-Bdynamic -lpthread 
