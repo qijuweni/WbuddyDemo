@@ -69,11 +69,18 @@ void SetChunkAllocted(SallocManager *pSallocManager, int order, unsigned int chu
     unsigned long OffsetByChar = perChunkSallocSpaceBytes * chunkNumb;
     char *pChunkSalloc = pSalloc + OffsetByChar;
 
-    unsigned int broChunkNumb = (chunkNumb % 2) ? (chunkNumb - 1):(chunkNumb + 1);
-    OffsetByChar = broChunkNumb * perChunkSallocSpaceBytes;
-    char *pBroChunkSalloc =  pSalloc + OffsetByChar;
+    unsigned int broChunkNumb = -1;
+    char *pBroChunkSalloc = NULL;
+    int result = -2;
 
-    int result = IsFirstParaMax(pChunkSalloc, pBroChunkSalloc, perChunkSallocSpaceBytes);
+    if(order != pSallocManager->orderNums_ - 1)
+    {
+        broChunkNumb = (chunkNumb % 2) ? (chunkNumb - 1):(chunkNumb + 1);
+        OffsetByChar = broChunkNumb * perChunkSallocSpaceBytes;
+        pBroChunkSalloc =  pSalloc + OffsetByChar;
+
+        result = IsFirstParaMax(pChunkSalloc, pBroChunkSalloc, perChunkSallocSpaceBytes);
+    }
 
     if(pSetSalloc != NULL)
     {
@@ -127,20 +134,10 @@ void SetChunkAllocted(SallocManager *pSallocManager, int order, unsigned int chu
         for(int i = 0; i < setCharNum; i++)
             pChunkSalloc[i] = 0xff;
     }
-/*
-    if(result == 1)
-    {
-    }
-    else if(result == -1)
+
+    if(result == -1 || (result == 0 && pBroChunkSalloc[perChunkSallocSpaceBytes - 1] == 0 ))
     {
         SetChunkAllocted(pSallocManager, order + 1, chunkNumb / 2, pBroChunkSalloc);
     }
-    else if(result == 0)
-    {
-        if(*pBroChunkSalloc == 0)
-        {
 
-        }
-    }
-*/
 }

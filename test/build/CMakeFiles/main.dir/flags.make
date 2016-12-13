@@ -3,11 +3,11 @@
 
 # compile C with g++
 # compile CXX with /usr/bin/c++
-C_FLAGS = -I/home/qjw/WBuddy/WBuddyModel/test/../include   
+C_FLAGS = -I/home/qjw/WBuddy/WBuddyModel/test/../include    -g
 
 C_DEFINES = 
 
-CXX_FLAGS = -I/home/qjw/WBuddy/WBuddyModel/test/../include   
+CXX_FLAGS = -I/home/qjw/WBuddy/WBuddyModel/test/../include    -g
 
 CXX_DEFINES = 
 

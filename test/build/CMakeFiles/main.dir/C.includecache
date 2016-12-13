@@ -17,4 +17,6 @@ gtest/gtest.h
 -
 Salloc.h
 /home/qjw/WBuddy/WBuddyModel/test/Salloc.h
+string.h
+-
 

@@ -8,6 +8,7 @@
 #include "stdio.h"
 #include <gtest/gtest.h>
 #include "Salloc.h"
+#include <string.h>
 
 #define PAGE_SIZE 4096
 #define SPACE  4096 * 256 * 4
@@ -30,6 +31,7 @@ static struct SallocManager* SallocManagerForTest()
         int bits = i + 1;
         int perSallocSize = (bits % 8 ) ? bits / 8 + 1 : bits / 8;
         pSallocArr[i] = (char*)malloc(perSallocSize * MaxChunkNumb);
+        memset(pSallocArr[i], 0, perSallocSize * MaxChunkNumb);
         MaxChunkNumb = MaxChunkNumb / 2;
     }
 
@@ -86,6 +88,7 @@ TEST(Salloc, IsFirstParaMax)
     EXPECT_EQ(1,IsFirstParaMax(a, b, 1));
 }
 
+
 TEST(Salloc, SetChunkAllocted)
 {
 //这个test是在 SetChunkAllocted 没有加上递归修改功能的测试代码
@@ -121,5 +124,17 @@ TEST(Salloc, SetChunkAllocted)
     SetChunkAllocted(pManager, 8, 1, &pManager->pSallocArray_[7][3]);//为了走到if(pSetSallocLength == perChunkSallocSpaceBytes - 1)
     EXPECT_EQ(pManager->pSallocArray_[8][3], (char)1);
     EXPECT_EQ(pManager->pSallocArray_[8][2], (char)0);
+
+
+    SallocManager *pSalloc = SallocManagerForTest();
+
+    SetChunkAllocted(pSalloc, 0, 0, NULL);
+
+    char value = 1;
+    for(int i = 0; i < 8; i++)
+    {
+        EXPECT_EQ(pSalloc->pSallocArray_[i][0], (char)value);
+        value *= 2;
+    }
 }
 
