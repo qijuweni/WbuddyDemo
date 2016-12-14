@@ -11,7 +11,7 @@
 #include <string.h>
 
 #define PAGE_SIZE 4096
-#define SPACE  4096 * 256 * 4
+#define SPACE  4096 * 256 * 4 * 256
 
 static struct SallocManager* SallocManagerForTest()
 {
@@ -152,12 +152,47 @@ TEST(Salloc, SetChunkAllocted)
         value *= 2;
     }
 
+    value = 1;
+    for(int i = 16; i < 24; i++)
+    {
+        if( i >= num )
+            break;
+
+        EXPECT_EQ(pSalloc->pSallocArray_[i][2], (char)value);
+        EXPECT_EQ(pSalloc->pSallocArray_[i][1], (char)0);
+        EXPECT_EQ(pSalloc->pSallocArray_[i][0], (char)0);
+
+        value *= 2;
+    }
+
     SetChunkAllocted(pSalloc, 2, 1, NULL);
     EXPECT_EQ(pSalloc->pSallocArray_[3][0], (char)12);
     EXPECT_EQ(pSalloc->pSallocArray_[4][0], (char)16);
-
+/*
     SetChunkAllocted(pSalloc, 3, 1, NULL);
     EXPECT_EQ(pSalloc->pSallocArray_[4][0], (char)28);
     EXPECT_EQ(pSalloc->pSallocArray_[5][0], (char)32);
+*/
+    SetChunkAllocted(pSalloc, 2, 2, NULL);
+    EXPECT_EQ(pSalloc->pSallocArray_[3][1], (char)8);
+    EXPECT_EQ(pSalloc->pSallocArray_[4][0], (char)24);
+
+    SetChunkAllocted(pSalloc, 4, 1, NULL);
+    EXPECT_EQ(pSalloc->pSallocArray_[5][0], (char)56);
+    EXPECT_EQ(pSalloc->pSallocArray_[6][0], (char)64);
+
+    SetChunkAllocted(pSalloc, 7, 1, NULL);
+    EXPECT_EQ(pSalloc->pSallocArray_[8][0], (char)128);
+    EXPECT_EQ(pSalloc->pSallocArray_[8][1], (char)1);
+
+ /*   SetChunkAllocted(pSalloc, 7, 3, NULL);
+    EXPECT_EQ(pSalloc->pSallocArray_[8][3], (char)1);
+    EXPECT_EQ(pSalloc->pSallocArray_[8][2], (char)0);
+    EXPECT_EQ(pSalloc->pSallocArray_[9][1], (char)3);
+*/
+    SetChunkAllocted(pSalloc, 8, 1, NULL);
+    EXPECT_EQ(pSalloc->pSallocArray_[9][0], (char)128);
+    EXPECT_EQ(pSalloc->pSallocArray_[9][1], (char)3);
+
 }
 

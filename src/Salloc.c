@@ -45,9 +45,9 @@ int IsFirstParaMax(char *pFirst, char *pScend, int charNums)
 {
     for(int i = charNums - 1; i >= 0; i--)
     {
-        if(pFirst[i] > pScend[i])
+        if((unsigned char)pFirst[i] > (unsigned char)pScend[i])
             return 1;
-        else if(pFirst[i] < pScend[i])
+        else if((unsigned char)pFirst[i] < (unsigned char)pScend[i])
             return -1;
     }
 
@@ -84,7 +84,7 @@ void SetChunkAllocted(SallocManager *pSallocManager, int order, unsigned int chu
 
     if(pSetSalloc != NULL)
     {
-//        strncpy(pChunkSalloc, pSetSalloc, pSetSallocLength);因为pSetSalloc 没多大，所以必用调用函数
+//        strncpy(pChunkSalloc, pSetSalloc, pSetSallocLength);因为pSetSalloc 没多大，所以不必用函数
         int pSetSallocLength = 0;
         if((perChunkBits - 1) % 8 == 0)
             pSetSallocLength = perChunkSallocSpaceBytes -1;
@@ -127,6 +127,9 @@ void SetChunkAllocted(SallocManager *pSallocManager, int order, unsigned int chu
         }
         else
         {
+            if(modByChar == 0)
+                modByChar = 8;
+
             SetBits(&pChunkSalloc[perChunkSallocSpaceBytes - 1], modByChar - 1);
         }
 
@@ -137,7 +140,17 @@ void SetChunkAllocted(SallocManager *pSallocManager, int order, unsigned int chu
 
     if(result == -1 || (result == 0 && pBroChunkSalloc[perChunkSallocSpaceBytes - 1] == 0 ))
     {
-        SetChunkAllocted(pSallocManager, order + 1, chunkNumb / 2, pBroChunkSalloc);
+        char *pUpSetChunk = pBroChunkSalloc;
+        if(result != 0 && pSetSalloc != NULL)
+        {
+            result = IsFirstParaMax(pChunkSalloc, pBroChunkSalloc, perChunkSallocSpaceBytes);
+
+            if(result == -1)
+                pUpSetChunk = pChunkSalloc;
+        }
+
+        SetChunkAllocted(pSallocManager, order + 1, chunkNumb / 2, pUpSetChunk);
+
     }
 
 }
