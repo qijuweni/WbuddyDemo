@@ -13,16 +13,16 @@
 struct SallocManager
 {
     int orderNums_;
-    char **pSallocArray_;
+    unsigned char **pSallocArray_;
 };
 
-SallocManager* Init(int orderNums, char **pSallocArray);
+struct SallocManager* Init(int orderNums, unsigned char **pSallocArray);
 
-void SetBit(char *pChar, int bitIndex, bool bIsSet1);
+void SetBit(unsigned char *pChar, int bitIndex, bool bIsSet1);
 
-void SetBits(char *pChar, int endBitIndex, bool bIsSet1);
+void SetBits(unsigned char *pChar, int endBitIndex, bool bIsSet1);
 
-int IsFirstParaMax(char *pFirst, char *pScend, int charNums);
+int IsFirstParaMax(unsigned char *pFirst, unsigned char *pScend, int charNums);
 
-void SetChunkAllocted(SallocManager *pSallocManager, int order, unsigned int chunkNumb, char *pSetSalloc);
+void SetChunkAllocted(SallocManager *pSallocManager, int order, unsigned int chunkNumb, bool isAllocted, unsigned char *pSetSalloc = NULL);
 #endif
