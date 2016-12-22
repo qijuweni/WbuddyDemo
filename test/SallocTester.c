@@ -56,6 +56,10 @@ TEST(Salloc, SetBit)
     SetBit(&c, 7, true);
     EXPECT_EQ(c, (unsigned char)135);
 
+    unsigned char f = 2;
+    SetBit(&f, 0, true);
+    EXPECT_EQ(f, (unsigned char)3);
+
     unsigned char d = 15;
     SetBit(&d, 2, false );
     EXPECT_EQ(d, 11);
@@ -63,6 +67,10 @@ TEST(Salloc, SetBit)
     unsigned char e = 255;
     SetBit(&e, 7, false);
     EXPECT_EQ(e,255 - 128);
+
+    unsigned char g = 255;
+    SetBit(&g, 0, false);
+    EXPECT_EQ(g, 255 - 1);
 }
 
 TEST(Salloc, SetBits)
@@ -86,6 +94,15 @@ TEST(Salloc, SetBits)
     unsigned char e = 23;
     SetBits(&e, 2, false);
     EXPECT_EQ(e, 16);
+
+    unsigned char f = 23;
+    SetBits(&f, 0, false);
+    EXPECT_EQ(f, 22);
+
+    unsigned char g = 22;
+    SetBits(&g, 0, true);
+    EXPECT_EQ(g, 23);
+
 }
 
 TEST(Salloc, IsFirstParaMax)
@@ -179,6 +196,8 @@ TEST(Salloc, SetChunkAllocted)
         value *= 2;
     }
 
+    printf("ordr num is %d\n", num);
+
     SetChunkAllocted(pSalloc, 2, 1, true);
     EXPECT_EQ(pSalloc->pSallocArray_[3][0], (unsigned char)12);
     EXPECT_EQ(pSalloc->pSallocArray_[4][0], (unsigned char)16);
@@ -220,6 +239,31 @@ TEST(Salloc, SetChunkAllocted)
     EXPECT_EQ(pSalloc->pSallocArray_[0][0], (unsigned char)0);
     EXPECT_EQ(pSalloc->pSallocArray_[4][0], (unsigned char)16);
     EXPECT_EQ(pSalloc->pSallocArray_[5][0], (unsigned char)48);
+    EXPECT_EQ(pSalloc->pSallocArray_[6][0], (unsigned char)64);
 
+    SetChunkAllocted(pSalloc, 7, 1, false);
+    EXPECT_EQ(pSalloc->pSallocArray_[8][0], (unsigned char)0);
+    EXPECT_EQ(pSalloc->pSallocArray_[8][1], (unsigned char)1);
+    EXPECT_EQ(pSalloc->pSallocArray_[9][0], (unsigned char)0);
+
+    SetChunkAllocted(pSalloc, 8, 1, false);
+    EXPECT_EQ(pSalloc->pSallocArray_[9][0], (unsigned char)0);
+    EXPECT_EQ(pSalloc->pSallocArray_[9][1], (unsigned char)2);
+    EXPECT_EQ(pSalloc->pSallocArray_[10][1], (unsigned char)4);
+    EXPECT_EQ(pSalloc->pSallocArray_[4][0], (unsigned char)16);
+
+    SetChunkAllocted(pSalloc, 2, 2, false);
+    EXPECT_EQ(pSalloc->pSallocArray_[3][0], (unsigned char)0);
+    EXPECT_EQ(pSalloc->pSallocArray_[3][1], (unsigned char)0);
+    EXPECT_EQ(pSalloc->pSallocArray_[4][0], (unsigned char)0);
+    EXPECT_EQ(pSalloc->pSallocArray_[5][0], (unsigned char)32);
+
+
+    SetChunkAllocted(pSalloc, 4, 1, false);
+
+    for(int i = 0; i < pSalloc->orderNums_ ; i++)
+    {
+        EXPECT_EQ(pSalloc->pSallocArray_[i][0], (unsigned char)0);
+    }
 }
 

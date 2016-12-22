@@ -143,23 +143,24 @@ void SetChunkAllocted(SallocManager *pSallocManager, int order, unsigned int chu
         }
 
         if(pSetSallocLength == perChunkSallocSpaceBytes)
-        {        if(isAllocted)
-                {
-                    pChunkSalloc[pSetSallocLength - 1] =  (pChunkSalloc[pSetSallocLength - 1] | pSetSalloc[pSetSallocLength - 1]);//=的话会有bug
-                }
+        {
+            if(isAllocted)
+           {
+                pChunkSalloc[pSetSallocLength - 1] =  (pChunkSalloc[pSetSallocLength - 1] | pSetSalloc[pSetSallocLength - 1]);//=的话会有bug
+           }
+           else
+           {
+                unsigned char mask = 1;
+                int tmp = 0;
+
+                if(modByChar == 0)
+                   tmp = 7;
                 else
-                {
-                    unsigned char mask = 1;
-                    int tmp = 0;
+                   tmp = modByChar - 1;
 
-                    if(modByChar == 0)
-                        tmp = 7;
-                    else
-                        tmp = modByChar - 1;
-
-                    mask = (unsigned char)0xff - ((mask << tmp) - 1);
-                    pChunkSalloc[pSetSallocLength - 1] =  (pChunkSalloc[pSetSallocLength - 1] & (pSetSalloc[pSetSallocLength - 1] | mask));//=的话会有bug
-                }
+                mask = (unsigned char)0xff - ((mask << tmp) - 1);
+                pChunkSalloc[pSetSallocLength - 1] =  (pChunkSalloc[pSetSallocLength - 1] & (pSetSalloc[pSetSallocLength - 1] | mask));//=的话会有bug
+            }
         }
         else
             pChunkSalloc[pSetSallocLength - 1] = pSetSalloc[pSetSallocLength - 1];
@@ -200,37 +201,40 @@ void SetChunkAllocted(SallocManager *pSallocManager, int order, unsigned int chu
         }
     }
 
-    if(isAllocted)
+    if(order != pSallocManager->orderNums_ - 1)
     {
-        if(result == -1 || (result == 0 && pBroChunkSalloc[perChunkSallocSpaceBytes - 1] == 0 ))
+        if(isAllocted)
         {
-            unsigned char *pUpSetChunk = pBroChunkSalloc;
-            if(result != 0 && pSetSalloc != NULL)
+            if(result == -1 || (result == 0 && pBroChunkSalloc[perChunkSallocSpaceBytes - 1] == 0 ))
+            {
+                unsigned char *pUpSetChunk = pBroChunkSalloc;
+                if(result != 0 && pSetSalloc != NULL)
+                {
+                    result = IsFirstParaMax(pChunkSalloc, pBroChunkSalloc, perChunkSallocSpaceBytes);
+
+                    if(result == -1)
+                        pUpSetChunk = pChunkSalloc;
+                }
+                SetChunkAllocted(pSallocManager, order + 1, chunkNumb / 2, isAllocted, pUpSetChunk);
+            }
+        }
+        else
+        {
+            if(result == 1)
             {
                 result = IsFirstParaMax(pChunkSalloc, pBroChunkSalloc, perChunkSallocSpaceBytes);
 
-                if(result == -1)
-                    pUpSetChunk = pChunkSalloc;
-            }
-            SetChunkAllocted(pSallocManager, order + 1, chunkNumb / 2, isAllocted, pUpSetChunk);
-        }
-    }
-    else
-    {
-        if(result == 1)
-        {
-            result = IsFirstParaMax(pChunkSalloc, pBroChunkSalloc, perChunkSallocSpaceBytes);
+                if(result != 1)
+                {
+                    if(!(result == 0 && (pBroChunkSalloc[perChunkSallocSpaceBytes - 1] != 0)))
+                        SetChunkAllocted(pSallocManager, order + 1, chunkNumb / 2, isAllocted, pChunkSalloc);
+                }
 
-            if(result != 1)
+            }
+            else //我原来都比你小或者等于你，释放后肯定比你更小了
             {
-                if(!(result == 0 && (pBroChunkSalloc[perChunkSallocSpaceBytes - 1] != 0)))
-                    SetChunkAllocted(pSallocManager, order + 1, chunkNumb / 2, isAllocted, pChunkSalloc);
+                SetChunkAllocted(pSallocManager, order + 1, chunkNumb / 2, isAllocted, pChunkSalloc);
             }
-
-        }
-        else //我原来都比你小或者等于你，释放后肯定比你更小了
-        {
-            SetChunkAllocted(pSallocManager, order + 1, chunkNumb / 2, isAllocted, pChunkSalloc);
         }
     }
 }
